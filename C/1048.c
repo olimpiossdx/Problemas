@@ -1,5 +1,3 @@
-#include<stdio.h>
-
 /*
 
 A empresa ABC resolveu conceder um aumento de salários a seus funcionários de acordo com a tabela abaixo:
@@ -47,27 +45,32 @@ Em percentual: 7 %
 
 */
 #include <stdio.h>
-int percentual(float salario){
-   if(salario >= 0 && salario <= 400.00){
-       return (15);
-   }
-   if(salario >= 400.01 && salario <= 800.00){
-       return (12);
-   }
-   if(salario >= 800.01 && salario <= 1200.00){
-       return (10);
-   }
-   if(salario >= 1200.01 && salario <= 2000.00 ){
-       return (7);
-   }
-   return (4);
+int percentual(float salario)
+{
+    if (salario >= 0 && salario <= 400.00)
+    {
+        return (15);
+    }
+    if (salario >= 400.01 && salario <= 800.00)
+    {
+        return (12);
+    }
+    if (salario >= 800.01 && salario <= 1200.00)
+    {
+        return (10);
+    }
+    if (salario >= 1200.01 && salario <= 2000.00)
+    {
+        return (7);
+    }
+    return (4);
 }
 int main()
 {
-  float salario;
-    scanf("%f",&salario);
-    printf("Novo salario: %.2f\n",((percentual(salario)*salario)/100)+salario );
-    printf("Reajuste ganho: %.2f\n",(percentual(salario)*salario)/100);
-    printf("Em percentual: %d %%\n",percentual(salario));
+    float salario;
+    scanf("%f", &salario);
+    printf("Novo salario: %.2f\n", ((percentual(salario) * salario) / 100) + salario);
+    printf("Reajuste ganho: %.2f\n", (percentual(salario) * salario) / 100);
+    printf("Em percentual: %d %%\n", percentual(salario));
     return 0;
 }
